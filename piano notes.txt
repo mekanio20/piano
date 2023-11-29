@@ -1,0 +1,44 @@
+o s g
+p s g
+p d j
+o d j
+o s g
+o s f
+u a f
+t o s
+o s g
+l s g l l
+f j o f j o f j
+l f j l l
+s g o s g
+; s j p s j
+l ] g o ] g j
+] f x ] f g
+] g o ] g
+i ] g
+i ] g k ] g k k
+i ] h k ] h k k
+a g i ] g i s g
+j s g j j
+] d u ] d k
+] s g ] s j
+] d u ] d j
+
+///////////////
+
+a k 3 4
+[ k 4 3
+o f z 1
+i d 1 z k
+8 6 8 9 8
+
+////////////////
+
+g a - 8
+; g a g a g a
+x d g d g d g d g
+p ] a ] p ] a ]
+y+; 5 ; 5
+i+x 5 x 5
+p+1 5 1 5
+i+3 5 3 5 
