@@ -45,6 +45,7 @@ document.addEventListener('keydown', function (event) {
     const note = document.getElementById(key);
 
     if (note) {
+        note.classList.remove('key')
         note.classList.add('active');
         notes[key].currentTime = 0;
         notes[key].play();
@@ -56,5 +57,6 @@ document.addEventListener('keyup', function (event) {
     const note = document.getElementById(key);
     if (note) {
         note.classList.remove('active');
+        note.classList.add('key');
     }
 });

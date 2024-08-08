@@ -1,58 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Piano</title>
-</head>
-
-<body>
-    <center>
-        <div class="piano">
-            <div id="q" class="white-key"></div>
-            <div id="w" class="black-key"></div>
-            <div id="e" class="white-key"></div>
-            <div id="r" class="black-key"></div>
-            <div id="t" class="white-key"></div>
-            <div id="y" class="white-key"></div>
-            <div id="u" class="black-key"></div>
-            <div id="i" class="white-key"></div>
-            <div id="o" class="black-key"></div>
-            <div id="p" class="white-key"></div>
-            <div id="[" class="black-key"></div>
-            <div id="]" class="white-key"></div>
-            
-            <div id="a" class="white-key"></div>
-            <div id="s" class="black-key"></div>
-            <div id="d" class="white-key"></div>
-            <div id="f" class="black-key"></div>
-            <div id="g" class="white-key"></div>
-            <div id="h" class="white-key"></div>
-            <div id="j" class="black-key"></div>
-            <div id="k" class="white-key"></div>
-            <div id="l" class="black-key"></div>
-            <div id=";" class="white-key"></div>
-            <div id="z" class="black-key"></div>
-            <div id="x" class="white-key"></div>
-            
-            <div id="1" class="white-key"></div>
-            <div id="2" class="black-key"></div>
-            <div id="3" class="white-key"></div>
-            <div id="4" class="black-key"></div>
-            <div id="5" class="white-key"></div>
-            <div id="6" class="white-key"></div>
-            <div id="7" class="black-key"></div>
-            <div id="8" class="white-key"></div>
-            <div id="9" class="black-key"></div>
-            <div id="0" class="white-key"></div>
-            <div id="-" class="black-key"></div>
-            <div id="=" class="white-key"></div>
+  </head>
+  <body>
+    <div
+      class="wrapper"
+      aria-label="Casio PT-1 Keyboard illustration made with HTML and CSS"
+    >
+      <div class="casio" aria-hidden="true">
+        <div class="speaker"></div>
+        <div class="controls">
+          <div class="controls-labels">
+            <p>mode</p>
+            <p>volume</p>
+            <p>tone</p>
+            <p>tempo</p>
+            <p>one key play</p>
+          </div>
+          <div class="controls-bar">
+            <div class="mode-container">
+              <div class="mode-bar"></div>
+              <div class="mode-handle"></div>
+            </div>
+            <div class="volume-container">
+              <div class="volume-bar"></div>
+              <div class="volume-handle"></div>
+            </div>
+            <div class="tone-container">
+              <div class="tone-bar"></div>
+              <div class="tone-handle"></div>
+            </div>
+            <div class="clear btn"></div>
+            <div class="del btn"></div>
+            <div class="down btn"></div>
+            <div class="up btn"></div>
+            <div class="select btn"></div>
+            <div class="reset btn"></div>
+            <div class="demo btn"></div>
+            <div class="memory btn"></div>
+            <div class="onekey-1 bigbtn"></div>
+            <div class="onekey-2 bigbtn"></div>
+          </div>
         </div>
-    </center>
-    <script defer src="script.js"></script>
-</body>
-
+        <div class="keys-container">
+          <div class="white">
+            <div id="q" class="key"></div>
+            <div id="w" class="key"></div>
+            <div id="e" class="key"></div>
+            <div id="r" class="key"></div>
+            <div id="t" class="key"></div>
+            <div id="y" class="key"></div>
+            <div id="u" class="key"></div>
+            <div id="i" class="key"></div>
+            <div id="o" class="key"></div>
+            <div id="p" class="key"></div>
+            <div id="[" class="key"></div>
+            <div id="]" class="key"></div>
+            <div id="a" class="key"></div>
+            <div id="s" class="key"></div>
+            <div id="d" class="key"></div>
+            <div id="f" class="key"></div>
+            <div id="g" class="key"></div>
+          </div>
+          <div class="black">
+            <div id="h" class="key"></div>
+            <div id="j" class="key"></div>
+            <div class=""></div>
+            <div id="k" class="key"></div>
+            <div id="l" class="key"></div>
+            <div class=""></div>
+            <div id=";" class="key"></div>
+            <div id="z" class="key"></div>
+            <div id="x" class="key"></div>
+            <div class=""></div>
+            <div id="1" class="key"></div>
+            <div id="2" class="key"></div>
+            <div class=""></div>
+            <div id="3" class="key"></div>
+            <div id="4" class="key"></div>
+            <div id="5" class="key"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer src="./script.js"></script>
+  </body>
 </html>
