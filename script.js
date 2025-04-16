@@ -39,24 +39,107 @@ const notes = {
     '=': new Audio('./sounds/si3.mp3'),
 };
 
-document.addEventListener('keydown', function (event) {
-    if (event.repeat) return;
-    const key = event.key.toLowerCase();
-    const note = document.getElementById(key);
+let isRecording = false;
+let recordedNotes = [];
+let volume = 1.0;
+let startTime;
 
-    if (note) {
-        note.classList.remove('key')
+// Volume kontrolü
+const volumeHandle = document.querySelector('.volume-handle');
+const volumeBar = document.querySelector('.volume-container');
+
+if (volumeBar) {
+    volumeBar.addEventListener('click', function(e) {
+        const rect = volumeBar.getBoundingClientRect();
+        const position = (e.clientY - rect.top) / rect.height;
+        volume = 1 - position;
+        volumeHandle.style.top = `${position * 100}%`;
+        updateVolume();
+    });
+}
+
+function updateVolume() {
+    Object.values(notes).forEach(audio => {
+        audio.volume = volume;
+    });
+}
+
+// Kayıt fonksiyonları
+const recordButton = document.querySelector('.memory');
+if (recordButton) {
+    recordButton.addEventListener('click', toggleRecording);
+}
+
+function toggleRecording() {
+    isRecording = !isRecording;
+    if (isRecording) {
+        recordButton.classList.add('active');
+        recordedNotes = [];
+        startTime = Date.now();
+    } else {
+        recordButton.classList.remove('active');
+    }
+}
+
+function playRecording() {
+    if (recordedNotes.length === 0) return;
+    
+    recordedNotes.forEach(note => {
+        setTimeout(() => {
+            playNote(note.key);
+        }, note.timing);
+    });
+}
+
+const demoButton = document.querySelector('.demo');
+if (demoButton) {
+    demoButton.addEventListener('click', playRecording);
+}
+
+function playNote(key) {
+    const note = document.getElementById(key);
+    if (note && notes[key]) {
         note.classList.add('active');
         notes[key].currentTime = 0;
         notes[key].play();
     }
+}
+
+// Klavye kontrolü
+document.addEventListener('keydown', function(event) {
+    if (event.repeat) return;
+    const key = event.key.toLowerCase();
+    playNote(key);
 });
 
-document.addEventListener('keyup', function (event) {
+document.addEventListener('keyup', function(event) {
     const key = event.key.toLowerCase();
     const note = document.getElementById(key);
     if (note) {
         note.classList.remove('active');
-        note.classList.add('key');
     }
+});
+
+// Fare tıklama kontrolü
+document.querySelectorAll('.key').forEach(key => {
+    key.addEventListener('mousedown', function() {
+        const keyId = this.id;
+        playNote(keyId);
+    });
+    
+    key.addEventListener('mouseup', function() {
+        this.classList.remove('active');
+    });
+    
+    // Dokunmatik ekran desteği
+    key.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        const keyId = this.id;
+        playNote(keyId);
+    });
+    
+    key.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        this.classList.remove('active');
+    });
 });

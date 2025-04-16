@@ -5,85 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Piano</title>
+    <title>Simple Piano</title>
   </head>
   <body>
-    <div
-      class="wrapper"
-      aria-label="Casio PT-1 Keyboard illustration made with HTML and CSS"
-    >
-      <div class="casio" aria-hidden="true">
-        <div class="speaker"></div>
-        <div class="controls">
-          <div class="controls-labels">
-            <p>mode</p>
-            <p>volume</p>
-            <p>tone</p>
-            <p>tempo</p>
-            <p>one key play</p>
-          </div>
-          <div class="controls-bar">
-            <div class="mode-container">
-              <div class="mode-bar"></div>
-              <div class="mode-handle"></div>
-            </div>
-            <div class="volume-container">
-              <div class="volume-bar"></div>
-              <div class="volume-handle"></div>
-            </div>
-            <div class="tone-container">
-              <div class="tone-bar"></div>
-              <div class="tone-handle"></div>
-            </div>
-            <div class="clear btn"></div>
-            <div class="del btn"></div>
-            <div class="down btn"></div>
-            <div class="up btn"></div>
-            <div class="select btn"></div>
-            <div class="reset btn"></div>
-            <div class="demo btn"></div>
-            <div class="memory btn"></div>
-            <div class="onekey-1 bigbtn"></div>
-            <div class="onekey-2 bigbtn"></div>
-          </div>
-        </div>
+    <div class="wrapper">
+      <div class="piano">
         <div class="keys-container">
           <div class="white">
-            <div id="q" class="key"></div>
-            <div id="w" class="key"></div>
-            <div id="e" class="key"></div>
-            <div id="r" class="key"></div>
-            <div id="t" class="key"></div>
-            <div id="y" class="key"></div>
-            <div id="u" class="key"></div>
-            <div id="i" class="key"></div>
-            <div id="o" class="key"></div>
-            <div id="p" class="key"></div>
-            <div id="[" class="key"></div>
-            <div id="]" class="key"></div>
-            <div id="a" class="key"></div>
-            <div id="s" class="key"></div>
-            <div id="d" class="key"></div>
-            <div id="f" class="key"></div>
-            <div id="g" class="key"></div>
+            <div id="q" class="key" data-note="Do"><span>Q</span></div>
+            <div id="w" class="key" data-note="Do#"><span>W</span></div>
+            <div id="e" class="key" data-note="Re"><span>E</span></div>
+            <div id="r" class="key" data-note="Re#"><span>R</span></div>
+            <div id="t" class="key" data-note="Mi"><span>T</span></div>
+            <div id="y" class="key" data-note="Fa"><span>Y</span></div>
+            <div id="u" class="key" data-note="Fa#"><span>U</span></div>
+            <div id="i" class="key" data-note="Sol"><span>I</span></div>
+            <div id="o" class="key" data-note="Sol#"><span>O</span></div>
+            <div id="p" class="key" data-note="La"><span>P</span></div>
+            <div id="[" class="key" data-note="La#"><span>[</span></div>
+            <div id="]" class="key" data-note="Si"><span>]</span></div>
+            <div id="a" class="key" data-note="Do2"><span>A</span></div>
+            <div id="s" class="key" data-note="Do2#"><span>S</span></div>
+            <div id="d" class="key" data-note="Re2"><span>D</span></div>
+            <div id="f" class="key" data-note="Re2#"><span>F</span></div>
+            <div id="g" class="key" data-note="Mi2"><span>G</span></div>
           </div>
           <div class="black">
-            <div id="h" class="key"></div>
-            <div id="j" class="key"></div>
+            <div id="h" class="key" data-note="Fa2"><span>H</span></div>
+            <div id="j" class="key" data-note="Fa2#"><span>J</span></div>
             <div class=""></div>
-            <div id="k" class="key"></div>
-            <div id="l" class="key"></div>
+            <div id="k" class="key" data-note="Sol2"><span>K</span></div>
+            <div id="l" class="key" data-note="Sol2#"><span>L</span></div>
             <div class=""></div>
-            <div id=";" class="key"></div>
-            <div id="z" class="key"></div>
-            <div id="x" class="key"></div>
+            <div id=";" class="key" data-note="La2"><span>;</span></div>
+            <div id="z" class="key" data-note="La2#"><span>Z</span></div>
+            <div id="x" class="key" data-note="Si2"><span>X</span></div>
             <div class=""></div>
-            <div id="1" class="key"></div>
-            <div id="2" class="key"></div>
+            <div id="1" class="key" data-note="Do3"><span>1</span></div>
+            <div id="2" class="key" data-note="Do3#"><span>2</span></div>
             <div class=""></div>
-            <div id="3" class="key"></div>
-            <div id="4" class="key"></div>
-            <div id="5" class="key"></div>
+            <div id="3" class="key" data-note="Re3"><span>3</span></div>
+            <div id="4" class="key" data-note="Re3#"><span>4</span></div>
+            <div id="5" class="key" data-note="Mi3"><span>5</span></div>
           </div>
         </div>
       </div>
